@@ -1,5 +1,6 @@
 
-
+# Normally you solve this problem with nested for loops that point at a min and a max
+#  but I wanted to try and solve it with only one for loop
 def stock_picker(prices)
   highestBuyIndex = 0
   lowestBuy = prices[0]
@@ -12,8 +13,8 @@ def stock_picker(prices)
       lowestBuyIndexCurr = i
     else
       profit = prices[i] - lowestBuy
-      highestBuyIndex = profit > maxProfit && i > 0 ? i : highestBuyIndex
-      lowestBuyIndex = profit > maxProfit ? lowestBuyIndexCurr : lowestBuyIndex
+      highestBuyIndex = profit > maxProfit && i > 0 ? i : highestBuyIndex # Track the highest day index
+      lowestBuyIndex = profit > maxProfit ? lowestBuyIndexCurr : lowestBuyIndex # Track the lowest day index
       maxProfit = profit > maxProfit ? profit : maxProfit # if profit is greater set maxProfit the greater profit
     end
   end

@@ -46,7 +46,5 @@ def main()
         end
     end
 end
-    
-    # puts "hai world"
 
 main()
